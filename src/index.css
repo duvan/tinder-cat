@@ -295,3 +295,17 @@ span{ }
   font-weight: bold;
   color: #9e3bec;
 }
+.signup{
+  width: 300px;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  /*padding: 20px;*/
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.signup form{
+  margin: 30px 30px;
+  padding: 0px;
+}
