@@ -20,6 +20,7 @@ body {
   height: 100%;
   position: fixed;
   overflow: scroll;
+  z-index: 1000;
 }
 
 .view-cats {
@@ -32,6 +33,7 @@ body {
 .about-cat{
   flex: 9;
   background: #f1f1f1;
+  z-index: 1000;
 }
 
 .interest-container{
@@ -131,6 +133,11 @@ body {
   /*margin: 10px;*/
 }
 
+.topbar-icon:hover ion-icon{
+  color: #07ABA0;
+  cursor: pointer;
+}
+
 .topbar-icon ion-icon{
   font-size: 1.8em;
   color: #888;
@@ -217,20 +224,33 @@ body {
 .reaction-icon:hover {
   cursor: pointer;
   opacity: 1;
-} 
+}
+span{}
 
-span{ }
+.show-mobile{
+  display: none;
+}
+.show-filter{
+  display: none;
+}
 
 /* ipad size */
 @media (max-width: 768px){
   .profile{
     display: none;
+    margin-top: 58px;
   }
   .about-cat{
     display: none;
   }
   .view-cats{
     margin-left: 0px;
+  }
+  .show-mobile{
+    display: block;
+  }
+  .show-filter{
+    display: block;
   }
 }
 
