@@ -10,7 +10,6 @@ export const ProfileContextStore = ({ children }) => {
     const [ profilePanel, setProfilePanel ] = useState(initialState)
 
     useEffect ( () => {
-        //console.log('width:', window.innerWidth)
         const showState = window.innerWidth > 768 //true si se cumple > 768
         setProfilePanel(showState)
     }, [])

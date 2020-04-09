@@ -26,11 +26,6 @@ export const Signup = () => (
                 <input type="password" />
             </div>
             <br />
-            <div className="input-custom">
-                <label for="sex_f">Gender</label>
-                <input type="hidden" name="Gender" value="{{user.gender}}"></input> 
-                
-            </div>
             <Link to="/">
                 <div className="button-primary">
                     <input type="button" value="Sign me up" />

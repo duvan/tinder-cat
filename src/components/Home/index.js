@@ -7,15 +7,17 @@ import { AboutContextStore }  from '../../contexts/AboutContext';
 
 export const Home = () => {
 
+    
+
     return (
     <div className="home-page">
-        <AboutContextStore>
         <ProfileContextStore>
+        <AboutContextStore>
             <Profile />
             <ViewCats />
             <AboutCat />
-        </ProfileContextStore>
         </AboutContextStore>
+        </ProfileContextStore>
         
     </div>
     )
