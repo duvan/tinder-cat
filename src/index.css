@@ -244,6 +244,7 @@ body {
   .about-cat{
     display: none;
     margin-top: 58px;
+    position: absolute;
   }
   .view-cats{
     margin-left: 0px;
