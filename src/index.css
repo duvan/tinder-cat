@@ -5,7 +5,6 @@ body {
   font-family: 'Lato', Helvetica, sans-serif;
 }
 
-
 .home-page {
   display: flex;
 }
@@ -54,6 +53,7 @@ body {
 
 .interest-container .interest-one{
   border: 1px solid #333;
+  border-radius: 10px 10px 10px 10px; 
   padding: 6px 10px;
   font-family: 'Lato';
   font-weight: 500;
@@ -209,7 +209,6 @@ body {
   font-weight: 300;
 }
 
-
 .reactions{
   display: flex;
   justify-content: center;
@@ -242,12 +241,16 @@ body {
     margin-top: 58px;
   }
   .about-cat{
-    display: none;
+    display: none; /* se quita cuando se haga la implementacion final*/
+    position: fixed;
+    width: 300;
     margin-top: 58px;
-    position: absolute;
+    right: 0;
+    height: 100%;
   }
   .view-cats{
     margin-left: 0px;
+    position: absolute;
   }
   .show-mobile{
     display: block;
@@ -329,3 +332,4 @@ body {
   margin: 30px 30px;
   padding: 0px;
 }
+  

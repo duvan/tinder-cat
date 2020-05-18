@@ -13,6 +13,13 @@ export const Interest = () => {
                     INTERESTS.map( (item, key) => <InterestOne key={ key } name={ item.name } status={ item.status } /> )
                 }
             </div>
+            <br />
+            <h3> Que estas buscando? </h3>
+            <div className="input-custom-l radibuttons">
+                        <input type="radio" name="genero" value="hombre" /> Gato 
+                        <input type="radio" name="genero" value="mujer" /> Gata 
+                        <input type="radio" name="genero" value="otro" /> Otro
+            </div>    
         </div>
     )
 }
