@@ -26,14 +26,18 @@ export const Signup = () => (
                 <input type="password" />
             </div>
             <div class="input-custom">
-                <label for="bio">Biografia<br /></label>
+                <label for="apellidos">Birthday</label>
+                <input type ="date"></input>
+            </div>
+            <div class="input-custom">
+                <label for="bio">Biography<br /></label>
                 <textarea name="bio"></textarea>
             </div>
             <br />
             <div className="input-custom-l radibuttons">
-                        <input type="radio" name="genero" value="hombre" /> Gato 
-                        <input type="radio" name="genero" value="mujer" /> Gata 
-                        <input type="radio" name="genero" value="otro" /> Otro
+                        <input type="radio" name="genero" value="hombre" /> Cat M
+                        <input type="radio" name="genero" value="mujer" />  Cat F
+                        <input type="radio" name="genero" value="otro" /> Undefined
             </div>
             <br />
             <Link to="/">
