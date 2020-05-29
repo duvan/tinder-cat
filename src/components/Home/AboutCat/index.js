@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { Interest } from './components/Interests'
 import { AboutContext } from '../../../contexts/AboutContext';
+import { Preferences } from './components/Preferences';
+import { PreferencesAge } from './components/PreferencesAges';
 
 
 const showAboutPanel = {
@@ -17,6 +19,8 @@ export const AboutCat = () => {
 
     return (
     <div style = {aboutPanel ? showAboutPanel : hideAboutPanel} className="about-cat">
+        <Preferences/>
+        <PreferencesAge/>
         <Interest />
     </div>
     )

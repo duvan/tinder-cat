@@ -332,4 +332,25 @@ body {
   margin: 30px 30px;
   padding: 0px;
 }
+
+.divider {
+  width: 5px;
+  height: 5px;
+  border: 1px solid #ccc;
+  margin: 0 15px;
+}
+
+.form-preferences label {
+  font-family: 'Lato';
+  font-size: 1.1em;
+  color: #333;
+}
+
+.preferences-ages-container {
+  margin: 15px 30px;
+}
+
+.rc-slider-track {
+  background: #9e3bec !important;
+}
   
