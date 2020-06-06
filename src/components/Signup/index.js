@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import Logo from '../../static/logo-login.png'
-import axios from 'axios'
 import swal from 'sweetalert'
+import { requestHttp } from '../../config/http-server'
+import { HTTP_CONSTANTS } from '../../config/http-constants'
 
 export const Signup = (props) => {
 
@@ -44,8 +45,9 @@ export const Signup = (props) => {
 
     const signupRequest = async (data) => {
         try {
-            const response = await axios.post('http://localhost:5001/cats/signup', data)
-            if (response.data.status === 1) {
+            const endpoint = HTTP_CONSTANTS.register
+            const response = await requestHttp('post', endpoint, data)
+            if (response.status === 1) {
                 swal('Great!', 'You are now in Tindercat', 'success')
                 .then(value => {
                     redirectLogin()
@@ -66,7 +68,7 @@ export const Signup = (props) => {
         <div className="login">
             <form onSubmit={ onSubmitHandler }>
                 <img src={Logo} />
-                <h3>Please fill this form to create an account, Sign Up</h3>
+                <h3>Sign Up</h3>
                 <input checked={ gender === 'F' } onChange={ e => setGender(e.target.value) } type="radio" name="gender" value="F" />
                 <label>Female</label>
                 <span className="divider"></span>
