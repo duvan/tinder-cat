@@ -26,8 +26,9 @@ export const Login = () => {
     const loginRequest = async (data) => {
         try {
             const endpoint = HTTP_CONSTANTS.login
-            const response = await requestHttp('get', endpoint, data)
+            const response = await requestHttp('get', endpoint, {}, data)
             if (response.status === 1) {
+                sessionStorage.setItem('_TOKEN_', response.token)
                 redirectHome()
             } else {
                 swal('Error', 'Email/passwort not valid', 'warning')
