@@ -37,21 +37,18 @@ export const Home = () => {
     }, [])
 
     return (
-    <div className="home-page">
-        <ProfileContextStore>
-        <AboutContextStore>
-            { 
-                !Object.keys(cat).length //false == 0
-                ? <p>Loading app...</p>
-                : <Fragment>
-                    <Profile bio={cat.bio} nick={cat.nick} image={cat.image} />
-                    <ViewCats />
-                    <AboutCat interest={ cat.interests } preferences={ cat.preferences }  />
-                </Fragment>
-            }   
-        </AboutContextStore>
-        </ProfileContextStore>
-
-    </div>
+        <div className="home-page">
+            <ProfileContextStore>
+                {
+                    Object.keys(cat).length // false == 0
+                    ? <Fragment>
+                        <Profile bio={cat.bio} nick={cat.nick} image={cat.image} />
+                        <ViewCats />
+                        <AboutCat interest={ cat.interests } preferences={ cat.preferences } />
+                    </Fragment>
+                    : <p>Loading app...</p>
+                }
+            </ProfileContextStore>
+        </div>
     )
 }
