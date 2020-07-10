@@ -1,12 +1,10 @@
-import React from 'react'
+import React from "react";
 import {
-    BrowserRouter as Router, 
-    Switch,
-    Route
+    BrowserRouter as Router, Switch, Route
 } from 'react-router-dom'
 import { Home } from './Home'
-import { Login } from './Login'
-import { Signup } from './Signup'
+import { Login } from "./Login";
+import { Signup } from "./Signup";
 
 export const Routers = () => (
     <Router>
@@ -14,8 +12,8 @@ export const Routers = () => (
             <Route exact path='/'>
                 <Home />
             </Route>
-            <Route path='/login' component={ Login } />
-            <Route path='/signup'>
+            <Route path='/Login' component={Login} />
+            <Route path='/Signup'>
                 <Signup />
             </Route>
         </Switch>

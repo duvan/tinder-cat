@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
+const Handle = Slider.Handle
 
-export const PreferencesAges = ({ ageMin = 3, ageMax = 10 }) => {
+export const PreferencesAges = ({ ageMin = 3, ageMax = 10, notifyChange }) => {
 
-    const [min, setMin] = useState(ageMin)
-    const [max, setMax] = useState(ageMax)
 
     const onChangeHandler = (result) => {
-        setMin(result[0])
-        setMax(result[1])
+        //console.log('min: ', result[0])
+        //console.log('max: ', result[1])
+        const min = result[0]
+        const max = result[1]
         notifyChange(min, max)
-    }
+    } 
 
     return (
         <div className="preferences-ages-container">
@@ -24,4 +25,6 @@ export const PreferencesAges = ({ ageMin = 3, ageMax = 10 }) => {
                 defaultValue={[ageMin, ageMax]} tipFormatter={value => `${value} age`} />
         </div>
     )
+
+    
 }
