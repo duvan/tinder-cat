@@ -48,7 +48,7 @@ export const Login = () => {
                 <img src={Logo} />
                 <div className="input-custom">
                     <label>Email address</label>
-                    <input value={ email } onChange={ (e) => setEmail(e.target.value) } type="email" />
+                    <input value={ email } onChange={ (e) => setEmail(e.target.value) } type="email" />
                 </div>
                 <div className="input-custom">
                     <label>Password</label>

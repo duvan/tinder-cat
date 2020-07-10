@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Couple = ({image, nick, bio}) => (
+export const Couple = ({ image, username, description }) => (
     <div className="image-couple">
-        <img src={image} />
-        <h3>{nick}</h3>
-        <p>{bio}</p>
+        <img src={ image } />
+        <h3>{ username }</h3>
+        <p>{ description }</p>
     </div>
 )

@@ -13,7 +13,6 @@ const headersConfig = (bearerToken) => {
 export const requestHttp = async (method = 'post', endpoint, requestData = {}, params = {}) => {
     try {
         const url = HTTP_CONSTANTS.url + endpoint
-        console.log(url)
         const bearerToken = sessionStorage.getItem('_TOKEN_')
         const options = {
             method,
@@ -24,7 +23,7 @@ export const requestHttp = async (method = 'post', endpoint, requestData = {}, p
         }
         const response = await axios(options)
         const { data } = response
-        return data 
+        return data
     } catch (err) {
         throw err
     }

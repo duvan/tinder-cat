@@ -5,6 +5,7 @@ body {
   font-family: 'Lato', Helvetica, sans-serif;
 }
 
+
 .home-page {
   display: flex;
 }
@@ -32,16 +33,10 @@ body {
 .about-cat{
   flex: 9;
   background: #f1f1f1;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
-  height: 100%;
-  width: 250px;
 }
 
 .interest-container{
-  margin: 30px 10px;
+  margin: 50px 10px;
 }
 .interest-container h3{
   font-weight: 300;
@@ -53,7 +48,6 @@ body {
 
 .interest-container .interest-one{
   border: 1px solid #333;
-  border-radius: 10px 10px 10px 10px; 
   padding: 6px 10px;
   font-family: 'Lato';
   font-weight: 500;
@@ -64,12 +58,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
-/*
-.interest-fill{
-  background: #07ABA0;
-  border: #05635d;
-}*/
 
 .avatar { text-align: center; }
 
@@ -209,6 +197,7 @@ body {
   font-weight: 300;
 }
 
+
 .reactions{
   display: flex;
   justify-content: center;
@@ -241,16 +230,16 @@ body {
     margin-top: 58px;
   }
   .about-cat{
-    display: none; /* se quita cuando se haga la implementacion final*/
+    /*display: none;*/
+    display: block; /* esta se quita cuando se haga implementación final */
     position: fixed;
-    width: 300;
+    width: 300px;
     margin-top: 58px;
     right: 0;
     height: 100%;
   }
   .view-cats{
     margin-left: 0px;
-    position: absolute;
   }
   .show-mobile{
     display: block;
@@ -283,7 +272,7 @@ body {
   font-family: 'Lato';
   color: #333;
 }
-.input-custom input {
+.input-custom input, .input-custom textarea {
   width: 100%;
   background: #f2f2f2;
   padding: 6px;
@@ -318,20 +307,6 @@ body {
   font-weight: bold;
   color: #9e3bec;
 }
-.signup{
-  width: 300px;
-  border: 1px solid #f2f2f2;
-  border-radius: 5px;
-  /*padding: 20px;*/
-  margin: 0 auto;
-  margin-top: 30px;
-  text-align: center;
-}
-
-.signup form{
-  margin: 30px 30px;
-  padding: 0px;
-}
 
 .divider {
   width: 5px;
@@ -353,4 +328,3 @@ body {
 .rc-slider-track {
   background: #9e3bec !important;
 }
-  

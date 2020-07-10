@@ -1,10 +1,9 @@
 import React from 'react'
 import { Routers } from './components/Routers'
-import { MsgContext } from './contexts/MsgContext';
+import { MsgContext } from './contexts/MsgContext'
 
 export const App = () => (
- 
- <MsgContext.Provider value ={ 'hola a todos!!' }>
+    <MsgContext.Provider value={ 'Hola a todos!!' }>
         <Routers />
     </MsgContext.Provider>
 )

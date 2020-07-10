@@ -1,43 +1,22 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { Preferences } from './components/Preferences';
-import { Interests } from './components/Interests';
-import { Matches } from './components/Matches';
-import { MsgContext } from '../../../contexts/MsgContext';
-import { AboutContext } from '../../../contexts/AboutContext';
-import { PreferencesAges } from './components/PreferencesAges';
-import { HTTP_CONSTANTS } from '../../../config/http-constants';
-import { requestHttp } from '../../../config/http-server';
+import React, { useState, useEffect } from 'react'
+import { Interest } from './components/Interests'
+import { Preferences } from './components/Preferences'
+import { PreferencesAges } from './components/PreferencesAges'
+import { HTTP_CONSTANTS } from '../../../config/http-constants'
+import { requestHttp } from '../../../config/http-server'
 
-const showAboutPanel = {
-    display: 'block'
-}
+export const AboutCat = ({preferences, interest}) => {
 
-const hideAboutPanel = {
-    display: 'none'
-}
-
-export const AboutCat = ({ preferences, interest }) => {
-
-    const [ preferencesUpdated, setPreferencesUpdated] = useState(preferences)
-
-    const {aboutPanel} = useContext(AboutContext)
+    const [ preferencesUpdated, setPreferencesUpdated ] = useState(preferences)
 
     const prefChangedHandler = (newGender) => {
-        console.log('preferencias cambiadas.....', newGender)
-
         setPreferencesUpdated(prevState => ({
             ...prevState,
             gender: newGender
         }))
-        
-
-        console.log(preferencesUpdated)
-
     }
 
     const prefAgesChangedHandler = (min, max) => {
-        console.log('preferencias de edad cambiadas......', min, max)
-
         setPreferencesUpdated(prevState => ({
             ...prevState,
             age_min: min,
@@ -46,7 +25,7 @@ export const AboutCat = ({ preferences, interest }) => {
     }
 
     useEffect(() => {
-        if (JSON.stringify(preferences) !== JSON.stringify(preferencesUpdated)){
+        if (JSON.stringify(preferences) !== JSON.stringify(preferencesUpdated)) {
             requestChangePreferences()
         }
     }, [preferencesUpdated])
@@ -55,23 +34,19 @@ export const AboutCat = ({ preferences, interest }) => {
         try {
             const endpoint = HTTP_CONSTANTS.updatePreferences
             const bodyData = {
-                preferences:preferencesUpdated
+                preferences: preferencesUpdated
             }
             const response = await requestHttp('put', endpoint, bodyData)
-            console.log('')
-
         } catch (err) {
-            console.log('Error:', err)
+            console.error('Error: ', err)
         }
     }
 
     return (
-        <div style ={aboutPanel ? showAboutPanel: hideAboutPanel} className= "about-cat">
-            About cat
-            <br></br>
+        <div className="about-cat">
             <Preferences onChange={ prefChangedHandler } gender={ preferences.gender } />
-            <PreferencesAges notifyChange={ prefAgesChangedHandler } ageMax={ preferences.ageMax } ageMin={ preferences.ageMin } />
-            <Interests interestCat={ interest } />
+            <PreferencesAges notifyChange={ prefAgesChangedHandler } ageMax={ preferences.age_max } ageMin={ preferences.age_min } />
+            <Interest interestCat={ interest } />
         </div>
     )
 }
