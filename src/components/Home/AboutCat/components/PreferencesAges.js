@@ -13,6 +13,7 @@ export const PreferencesAges = ({ ageMin = 3, ageMax = 10 }) => {
     const onChangeHandler = (result) => {
         setMin(result[0])
         setMax(result[1])
+        notifyChange(min, max)
     }
 
     return (
