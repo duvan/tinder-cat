@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom'
 
 export const Credentials = () => (
-    <>
+    <div className = "login">
         <div className = "input-custom">
             <label>Username</label>
             <input type="email" />
@@ -20,10 +20,10 @@ export const Credentials = () => (
         </Link>
         <br />
         <p className = "signup-Link">
-            ¿Are you a new member?
+            Are you a new member?
             <Link to = "/signup">
                 Signup
             </Link> 
         </p>
-    </>
+    </div>
 )
