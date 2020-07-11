@@ -3,6 +3,9 @@ export const HTTP_CONSTANTS = {
     register: '/cats/signup',
     login: '/cats/login',
     autologin: '/cats/autologin',
-    interests: '/interests',
-    updatePreferences: '/cats/preferences'
+    interests: '/interest/',
+    updatePreferences: '/cats/preferences',
+    catList: '/cats/',
+    liked: '/cats/Liked',
+    unliked: '/cats/Unliked'
 }

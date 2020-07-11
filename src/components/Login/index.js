@@ -7,12 +7,13 @@ import { HTTP_CONSTANTS } from '../../config/http-constants'
 import { requestHttp } from '../../config/http-server'
 import swal from 'sweetalert'
 
+
 export const Login = () => {
 
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
 
-    const history = useHistory()
+    const history = useHistory ()
 
     const loginHandler = (e) => {
         e.preventDefault()
@@ -26,10 +27,11 @@ export const Login = () => {
     const loginRequest = async (data) => {
         try {
             const endpoint = HTTP_CONSTANTS.login
-            const response = await requestHttp('get', endpoint, {}, data)
+            const response = await requestHttp ('get', endpoint, {}, data)
+            console.log(response)
             if (response.status === 1) {
                 sessionStorage.setItem('_TOKEN_', response.token)
-                redirectHome()
+                redirectHome ()
             } else {
                 swal('Error', 'Email/passwort not valid', 'warning')
             }
@@ -38,7 +40,8 @@ export const Login = () => {
         }
     }
 
-    const redirectHome = () => {
+
+    const redirectHome = () =>{
         history.push('/')
     }
 
@@ -48,7 +51,7 @@ export const Login = () => {
                 <img src={Logo} />
                 <div className="input-custom">
                     <label>Email address</label>
-                    <input value={ email } onChange={ (e) => setEmail(e.target.value) } type="email" />
+                    <input value={ email } onChange={ (e) => setEmail(e.target.value) } type="email" />
                 </div>
                 <div className="input-custom">
                     <label>Password</label>
@@ -60,7 +63,7 @@ export const Login = () => {
                 </div>
                 <br />
                 <p className="signup-link">
-                    ¿Not member yet?
+                    ¿Are you a new member?
                     <Link to="/signup">
                         Signup
                     </Link>

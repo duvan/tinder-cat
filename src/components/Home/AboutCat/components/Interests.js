@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { InterestOne } from './InterestOne'
-// import { INTERESTS } from '../../../../data/db'
+import { InterestOne } from './interestOne'
 import { HTTP_CONSTANTS } from '../../../../config/http-constants'
 import { requestHttp } from '../../../../config/http-server'
 
@@ -31,6 +30,8 @@ export const Interest = ({ interestCat = [] }) => {
         for(let i = 0; i < interestList.length; i++ ){
             const interestItem = interestList[i]
             const found = interestListCat.find(e => e === interestItem._id)
+            console.log(found)
+            console.log(interestList)
             if (found){
                 interestItem.status = true
             }

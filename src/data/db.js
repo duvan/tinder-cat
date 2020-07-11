@@ -1,24 +1,29 @@
 export const CAT_LIST = [
     {
-        username: 'princess',
-        image: 'https://www.hola.com/imagenes/estar-bien/20180926130368/como-saber-si-mi-gata-esta-en-celo/0-603-746/como-saber-si-mi-gata-esta-en-celo-ok-t.jpg',
-        description: 'Soy tierna, me gusta cazar pajaros y comer galletas de la suerte. Da like para que salgamos a cazar!'
+        username: 'Princess',
+        image: "https://www.feelcats.com/blog/wp-content/uploads/2015/07/gato-siames.jpg",
+        description: 'Soy independiente, no quiero una relación seria',
     },
     {
-        username: 'emma',
-        image: 'https://www.purina.es/gato/purina-one/sites/g/files/mcldtz1856/files/2018-06/__tu_gata_esta_embarazada_%20%282%29.jpg',
-        description: 'Soy tierna, me gusta cazar pajaros y comer galletas de la suerte. Da like para que salgamos a cazar!'
+        username: 'Emma',
+        image: "https://t2.ea.ltmcdn.com/es/images/4/8/4/ya_has_elegido_uno_de_los_nombres_bonitos_para_gatas_y_gatitas_8484_2_600.jpg",
+        description: 'Soy tierna, me gusta que me apapachen y los regalos',
     },
     {
-        username: 'mirella',
-        image: 'https://img.vixdata.io/pd/jpg-large/es/sites/default/files/imj/hogartotal/l/la-epoca-de-celo-de-las-gatas-1.jpg',
-        description: 'Soy tierna, me gusta cazar pajaros y comer galletas de la suerte. Da like para que salgamos a cazar!'
+        username: 'Sofy',
+        image: "https://www.anipedia.net/imagenes/celo-en-gatas.jpg",
+        description: 'Soy divertida, busco un gato valiente para cazar pajaros',
     },
     {
-        username: 'condesa',
-        image: 'https://www.significados-nombres.com/wp-content/uploads/2017/01/nombres-para-gatas.jpg',
-        description: 'Soy tierna, me gusta cazar pajaros y comer galletas de la suerte. Da like para que salgamos a cazar!'
-    }
+        username: 'Mirella',
+        image: "https://animalmascota.com/wp-content/2015/11/gata-esterilizacion.jpg", 
+        description: 'Soy brillante como mi nombre, soy inteligente y me encanta recorrer tejados en la noche',
+    },
+    {
+        username: 'Sisi',
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRH4Wmw0R-fdRhnJIziSiwRconeo38RZv-cq44WjjA1ehJwd1a3", 
+        description: 'Soy una gata de casa, no busco relaciones pasajeras, me encantan los gatos serios',
+    },
 ]
 
 export const INTERESTS = [
@@ -28,7 +33,7 @@ export const INTERESTS = [
     },
     {
         name: 'Dormir',
-        status: false,
+        status: false
     },
     {
         name: 'Despelucar',
@@ -43,12 +48,12 @@ export const INTERESTS = [
         status: true
     },
     {
-        name: 'Holgasanear',
+        name: 'Holgazanear',
         status: false
     },
     {
         name: 'Comer',
-        status: false
+        status: true
     },
     {
         name: 'Ronronear',
@@ -57,5 +62,5 @@ export const INTERESTS = [
     {
         name: 'Bañarse',
         status: true
-    }
+    },
 ]
